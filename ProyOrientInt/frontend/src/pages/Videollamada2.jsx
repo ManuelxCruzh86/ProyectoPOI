@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import { FaMicrophone, FaMicrophoneSlash, FaVideo, FaVideoSlash, FaPhoneSlash, FaUserPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; 
 
 const VideoCall = () => {
+  const navigate = useNavigate();
   const [isMicOn, setIsMicOn] = useState(true);
   const [isVideoOn, setIsVideoOn] = useState(true);
   const [callStatus, setCallStatus] = useState("Conectando...");
@@ -17,6 +19,11 @@ const VideoCall = () => {
       video: true,
     };
     setUsuariosConectados([...usuariosConectados, nuevoUsuario]);
+  };
+
+  const finalizarLlamada = () => {
+    setCallStatus("Finalizado");
+    navigate("/"); // Redirigir al inicio
   };
 
   return (
@@ -81,13 +88,12 @@ const VideoCall = () => {
           </button>
           <button
             onClick={unirseAVideollamada}
-            className="p-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white"
-          >
+            className="p-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white">
             <FaUserPlus size={24} />
           </button>
           <button
             className="p-3 rounded-full bg-red-600 hover:bg-red-700 text-white"
-            onClick={() => setCallStatus("Finalizado")}
+            onClick={finalizarLlamada} // redirigir
           >
             <FaPhoneSlash size={24} />
           </button>
