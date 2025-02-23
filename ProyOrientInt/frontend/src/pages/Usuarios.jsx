@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 
 const usersData = [
-  { id: 1, name: "Ana López", email: "ana@example.com", active: true },
-  { id: 2, name: "Carlos Pérez", email: "carlos@example.com", active: false },
-  { id: 3, name: "Luis Gómez", email: "luis@example.com", active: true },
-  { id: 4, name: "María Rodríguez", email: "maria@example.com", active: false },
+  { id: 1, name: "Chester Benington", email: "chesterPark@gmail.com", active: true },
+  { id: 2, name: "Zambrano", email: "Zambrano@example.com", active: false },
+  { id: 3, name: "Nadiela Perez", email: "Nadii@example.com", active: true },
+  { id: 4, name: "Yerson KillerCross", email: "Yerson@example.com", active: false },
 ];
 
 export default function Usuarios() {
@@ -20,7 +21,15 @@ export default function Usuarios() {
 
   return (
     <div className="h-screen w-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6">
-      <div className="w-full max-w-4xl h-full flex flex-col overflow-hidden">
+      <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 flex justify-between items-center shadow-md">
+        <div className="flex items-center space-x-4">
+                    <img src="/conexxo.png" className="h-24 w-24 object-contain" alt="Logo" />
+                    <h1 className="text-3xl font-bold">ConneXXo</h1>
+                </div>
+        <Link to="/" className="text-yellow-400 hover:text-yellow-300">← Volver al Inicio</Link>
+      </nav>
+
+      <div className="w-full max-w-4xl h-full flex flex-col overflow-hidden mt-20">
         <h2 className="text-4xl font-bold mb-6 text-center">Estado de Usuarios</h2>
         <div className="flex-1 overflow-y-auto w-full space-y-4 p-4 bg-gray-800 rounded-lg shadow-lg">
           {users.map((user) => (

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; 
+
 
 const rewardsData = [
-  { id: 1, user: "Juan Pérez", reward: "Medalla de Oro", points: 500 },
-  { id: 2, user: "Ana Gómez", reward: "Insignia de Platino", points: 400 },
-  { id: 3, user: "Carlos López", reward: "Trofeo de Esfuerzo", points: 300 },
+  { id: 1, user: "Chester Benington", reward: "Medalla de Oro", points: 500 },
+  { id: 2, user: "Zambrano Gómez", reward: "Medalla de Platino", points: 400 },
+  { id: 3, user: "Nadiela Airam", reward: "Medalla de Cobre", points: 300 },
 ];
 
 export default function RewardsSystem() {
@@ -11,11 +13,12 @@ export default function RewardsSystem() {
 
   return (
     <div className="h-screen w-screen flex flex-col bg-gray-900 text-white">
-      <nav className="p-4 bg-gray-800 flex justify-between items-center shadow-md">
+      <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 flex justify-between items-center shadow-md">
         <div className="flex items-center space-x-4">
-          <img src="/conexxo.png" className="h-24 w-24 object-contain" alt="Logo" />
-          <h1 className="text-3xl font-bold">ConneXXo</h1>
-        </div>
+                    <img src="/conexxo.png" className="h-24 w-24 object-contain" alt="Logo" />
+                    <h1 className="text-3xl font-bold">ConneXXo</h1>
+                </div>
+        <Link to="/" className="text-yellow-400 hover:text-yellow-300">← Volver al Inicio</Link>
       </nav>
 
       <main className="flex-1 flex flex-col items-center justify-center px-6">

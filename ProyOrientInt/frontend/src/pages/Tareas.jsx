@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import { FaPlus, FaCheckCircle, FaTrash } from "react-icons/fa";
 
 const Tareas = () => {
@@ -21,6 +22,14 @@ const Tareas = () => {
 
   return (
     <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-white">
+        <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 flex justify-between items-center shadow-md">
+        <div className="flex items-center space-x-4">
+                    <img src="/conexxo.png" className="h-24 w-24 object-contain" alt="Logo" />
+                    <h1 className="text-3xl font-bold">ConneXXo</h1>
+                </div>
+            <Link to="/" className="text-yellow-400 hover:text-yellow-300">← Volver al Inicio</Link>
+        </nav>
+
       <div className="max-w-xl w-full p-6 bg-gray-800 shadow-lg rounded-xl">
         <h2 className="text-2xl font-bold text-center mb-4 text-white">Gestión de Tareas</h2>
         
