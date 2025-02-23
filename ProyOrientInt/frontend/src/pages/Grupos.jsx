@@ -114,17 +114,17 @@ const Grupos = () => {
   const closeModal = () => setModal(false);
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-gray-900 text-white relative">
+    <div className="h-screen w-screen bg-gray-900 text-white relative overflow-x-hidden">
       <Header />
       <main className="py-3 relative">
-        <h1 className="text-center">Mis grupos</h1>
+        <h1 className="text-center mb-6">Mis grupos</h1>
         <button
           onClick={openModal}
           className="absolute right-3 top-3 bg-gray-800 p-2 rounded-lg transition hover:bg-gray-700 active:opacity-50"
         >
           Crear grupo
         </button>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-3xl mx-auto mt-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-3xl mx-auto">
           {groups.map((group) => (
             <GroupCard key={group.id} {...group} />
           ))}
