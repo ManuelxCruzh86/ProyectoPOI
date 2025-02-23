@@ -9,6 +9,7 @@ import Usuarios from "./pages/Usuarios";
 import Videollamada2 from "./pages/Videollamada2";
 import ChatGrupal from "./pages/Chatgrupal";
 import Login from "./pages/Login";
+import Grupos from "./pages/Grupos";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/videollamada2" element={<Videollamada2 />} />
           <Route path="/chatgrupal" element={<ChatGrupal />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/grupos" element={<Grupos />} />
         </Routes>
       </div>
 

@@ -89,6 +89,12 @@ function Home() {
             <p className="font-semibold mt-2 text-xl">Estado de Usuarios</p>
             <p className="text-sm opacity-75">Ver quién está en línea en tiempo real.</p>
           </Link>
+
+          <Link to="/grupos" className="bg-gray-800 p-6 rounded-xl flex flex-col items-center shadow-lg hover:bg-gray-700 transition w-full">
+            <span className="text-5xl">👨‍👩‍👧‍👦</span>
+            <p className="font-semibold mt-2 text-xl">Mis Grupos</p>
+            <p className="text-sm opacity-75">Mira los grupos de los que eres miembro</p>
+          </Link>
         </div>
 
         <div className="mt-12">
