@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react"; 
 import { FaPaperPlane, FaUser, FaUsers } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Asegúrate de importar Link
 
 const ChatGrupal = () => {
   const [mensaje, setMensaje] = useState("");
@@ -41,19 +42,24 @@ const ChatGrupal = () => {
 
   return (
     <div className="h-screen w-screen flex bg-gray-900 text-white">
-      <aside className="w-64 bg-gray-800 p-4 shadow-lg">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-          <FaUsers />
-          Usuarios Conectados
-        </h2>
-        <ul className="space-y-2">
-          {usuariosConectados.map((usuario) => (
-            <li key={usuario.id} className="flex items-center gap-2">
-              <FaUser className="text-gray-400" />
-              <span>{usuario.nombre}</span>
-            </li>
-          ))}
-        </ul>
+      <aside className="w-64 bg-gray-800 p-4 shadow-lg flex flex-col justify-between">
+        <div>
+          <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <FaUsers />
+            Usuarios Conectados
+          </h2>
+          <ul className="space-y-2">
+            {usuariosConectados.map((usuario) => (
+              <li key={usuario.id} className="flex items-center gap-2">
+                <FaUser className="text-gray-400" />
+                <span>{usuario.nombre}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Link to="/" className="text-blue-400 hover:underline mt-4">
+          ← Volver al inicio
+        </Link>
       </aside>
 
       <main className="flex-1 flex flex-col">
@@ -69,9 +75,7 @@ const ChatGrupal = () => {
           {mensajes.map((msg) => (
             <div
               key={msg.id}
-              className={`flex ${
-                msg.usuario === "Tú" ? "justify-end" : "justify-start"
-              }`}
+              className={`flex ${msg.usuario === "Tú" ? "justify-end" : "justify-start"}`}
             >
               <div
                 className={`max-w-md p-3 rounded-lg ${
