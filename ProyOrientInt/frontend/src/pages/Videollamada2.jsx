@@ -27,7 +27,7 @@ const VideoCall = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-gray-900">
+    <div className="h-full w-full flex items-center justify-center bg-gray-900">
       <div className="w-full h-full max-w-6xl bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
         <div className="bg-gray-700 text-white p-4 flex justify-between items-center">
           <h2 className="text-lg font-semibold">Videollamada en Curso</h2>

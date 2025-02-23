@@ -18,7 +18,7 @@ function Login() {
     };
 
     return (
-        <div className="h-screen w-screen flex flex-col bg-gray-900 text-white">
+        <div className="h-full w-full flex flex-col bg-gray-900 text-white">
             <nav className="p-4 bg-gray-800 flex justify-between items-center shadow-md">
                 <div className="flex items-center space-x-4">
                     <img src="/conexxo.png" className="h-24 w-24 object-contain" alt="Logo" />
@@ -93,14 +93,14 @@ function Login() {
                         
                         <button
                             type="submit"
-                            className="w-full bg-yellow-400 text-gray-900 px-4 py-2 rounded font-semibold hover:bg-yellow-300 transition-colors"
+                            className="w-full bg-yellow-400 text-gray-100 px-4 py-2 rounded font-semibold hover:bg-yellow-300 transition-colors"
                         >
                             {isLogin ? 'Iniciar Sesión' : 'Registrarse'}
                         </button>
                         
                         <button 
                             onClick={() => setIsLogin(!isLogin)}
-                            className="w-full bg-yellow-400 text-gray-900 px-4 py-2 rounded font-semibold hover:bg-yellow-300 transition-colors"
+                            className="w-full bg-yellow-400 text-gray-100 px-4 py-2 rounded font-semibold hover:bg-yellow-300 transition-colors"
                         >
                             {isLogin ? 
                                 '¿No tienes cuenta? Regístrate' : 

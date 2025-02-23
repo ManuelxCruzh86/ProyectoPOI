@@ -97,9 +97,14 @@ function ChatIndividual() {
 
 
   return (
+    
     <div className="h-full w-full flex bg-gray-900 text-white">
+      
         <aside className="w-64 bg-gray-800 p-4 shadow-lg">
-          <h2 className="text-xl font-bold mb-4">Usuarios Conectados</h2>
+          <Link to="/" className="text-blue-400 hover:underline mt-4">
+            ← Volver al inicio
+          </Link>
+          <h2 className="text-xl font-bold mb-4 mt-9">Usuarios Conectados</h2>
             <ul className="space-y-2">
             {usuarios.map((usuario) => (
               <li
@@ -114,9 +119,6 @@ function ChatIndividual() {
               </li>
             ))}
           </ul>
-          <Link to="/" className="text-blue-400 hover:underline mt-4">
-          ← Volver al inicio
-        </Link>
         </aside>
 
         <main className="relative flex-1 flex flex-col">

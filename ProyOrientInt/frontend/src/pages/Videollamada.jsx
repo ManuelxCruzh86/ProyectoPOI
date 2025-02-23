@@ -38,7 +38,7 @@ const VideoCallPreview = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-gray-900">
+    <div className="h-full w-full bg-gray-900">
       {/* Navbar */}
       <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 flex justify-between items-center shadow-md">
         <div className="flex items-center space-x-4">

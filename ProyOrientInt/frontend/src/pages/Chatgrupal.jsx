@@ -41,7 +41,7 @@ const ChatGrupal = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex bg-gray-900 text-white">
+    <div className="h-full w-full flex bg-gray-900 text-white">
       <aside className="w-64 bg-gray-800 p-4 shadow-lg flex flex-col justify-between">
         <div>
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">

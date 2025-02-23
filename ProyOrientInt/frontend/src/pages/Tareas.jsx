@@ -21,7 +21,7 @@ const Tareas = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-white">
+    <div className="h-full w-full flex items-center justify-center bg-gray-900 text-white">
         <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 flex justify-between items-center shadow-md">
         <div className="flex items-center space-x-4">
                     <img src="/conexxo.png" className="h-24 w-24 object-contain" alt="Logo" />
