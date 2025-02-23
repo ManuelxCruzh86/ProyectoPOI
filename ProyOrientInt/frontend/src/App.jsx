@@ -13,10 +13,7 @@ import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="h-screen flex flex-col">
-
-      {/* Configuración de rutas */}
-      <div className="flex-1 p-4">
+      <div className="h-screen w-screen p-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/chat" element={<Chat />} />
@@ -30,7 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
-    </div>
+
   );
 }
 
