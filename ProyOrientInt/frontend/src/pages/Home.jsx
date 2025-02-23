@@ -6,7 +6,7 @@ function Home() {
     const [showRewards, setShowRewards] = useState(false);
 
   return (
-    <div className="h-full w-full flex flex-col bg-gray-900 text-white">
+    <div className="h-full w-full flex flex-col text-white overflow-x-hidden">
       <nav className="p-4 bg-gray-800 flex justify-between items-center shadow-md">
         <div className="flex items-center space-x-4">
           <img src="/conexxo.png" className="h-24 w-24 object-contain" />
@@ -52,7 +52,7 @@ function Home() {
         </div>
       </nav>
 
-      <main className="flex-1 flex flex-col items-center justify-center px-6">
+      <main className="flex-1 flex flex-col items-center justify-center py-10 bg-gray-900">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
           <Link to="/chat" className="bg-gray-800 p-6 rounded-xl flex flex-col items-center shadow-lg hover:bg-gray-700 transition w-full">
             <span className="text-5xl">💬</span>

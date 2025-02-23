@@ -14,7 +14,7 @@ import Grupos from "./pages/Grupos";
 
 function App() {
   return (
-      <div className="h-screen w-screen p-4">
+      <div className="h-screen w-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/chat" element={<Chat />} />
