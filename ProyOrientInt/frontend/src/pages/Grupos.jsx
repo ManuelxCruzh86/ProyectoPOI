@@ -4,41 +4,19 @@ import Header from "../components/Header";
 import groupImage from "../../public/group.svg";
 
 const groups = [
-  {
-    id: 1,
-    name: "Grupo 1",
-  },
-  {
-    id: 2,
-    name: "Grupo 2",
-  },
-  {
-    id: 3,
-    name: "Grupo 3",
-  },
-  {
-    id: 4,
-    name: "Grupo 4",
-  },
-  {
-    id: 5,
-    name: "Grupo 5",
-  },
-  {
-    id: 6,
-    name: "Grupo 6",
-  },
+  { id: 1, name: "Grupo 1" },
+  { id: 2, name: "Grupo 2" },
+  { id: 3, name: "Grupo 3" },
+  { id: 4, name: "Grupo 4" },
+  { id: 5, name: "Grupo 5" },
+  { id: 6, name: "Grupo 6" },
 ];
 
 const GroupCard = ({ name }) => {
   return (
     <Link to={`/chatgrupal/`}>
       <div className="bg-gray-800 p-4 rounded-lg cursor-pointer transition-opacity hover:opacity-75 active:opacity-50">
-        <img
-          className="w-20 h-20 mx-auto"
-          src={groupImage}
-          alt="Imagen del grupo"
-        />
+        <img className="w-20 h-20 mx-auto" src={groupImage} alt="Imagen del grupo" />
         <h2 className="text-xl font-bold text-center mb-3">{name}</h2>
       </div>
     </Link>
@@ -52,24 +30,13 @@ const CreateGroupModal = ({ onClose }) => {
 
   const addGroup = () => {
     if (!groupName) return;
-
-    groups.push({
-      id: groups.length + 1,
-      name: groupName,
-    });
+    groups.push({ id: groups.length + 1, name: groupName });
     onClose();
   };
 
   const addMember = () => {
     if (!newMember) return;
-
-    setMembers([
-      ...members,
-      {
-        id: members.length + 1,
-        name: newMember,
-      },
-    ]);
+    setMembers([...members, { id: members.length + 1, name: newMember }]);
     setNewMember("");
   };
 
@@ -116,11 +83,14 @@ const Grupos = () => {
   return (
     <div className="h-screen w-screen bg-gray-900 text-white relative overflow-x-hidden">
       <Header />
+      <nav className="absolute right-3 top-3">
+        <Link to="/" className="text-yellow-400 hover:text-yellow-300 ">← Volver al Inicio</Link>
+      </nav>
       <main className="py-3 relative">
         <h1 className="text-center mb-6">Mis grupos</h1>
         <button
           onClick={openModal}
-          className="absolute right-3 top-3 bg-gray-800 p-2 rounded-lg transition hover:bg-gray-700 active:opacity-50"
+          className="absolute right-3 top-12 bg-gray-800 p-2 rounded-lg transition hover:bg-gray-700 active:opacity-50"
         >
           Crear grupo
         </button>

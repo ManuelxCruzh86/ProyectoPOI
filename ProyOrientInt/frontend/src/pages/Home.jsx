@@ -45,7 +45,6 @@ function Home() {
             Iniciar Sesión
           </Link>
 
-          {/* Nuevo botón de perfil */}
           <Link to="/perfil" className="bg-gray-900 hover:bg-gray-700 text-white p-2 rounded-full">
             <span className="text-2xl">👤</span>
           </Link>
@@ -89,17 +88,11 @@ function Home() {
             <p className="font-semibold mt-2 text-xl">Estado de Usuarios</p>
             <p className="text-sm opacity-75">Ver quién está en línea en tiempo real.</p>
           </Link>
-
-          <Link to="/grupos" className="bg-gray-800 p-6 rounded-xl flex flex-col items-center shadow-lg hover:bg-gray-700 transition w-full">
-            <span className="text-5xl">👨‍👩‍👧‍👦</span>
-            <p className="font-semibold mt-2 text-xl">Mis Grupos</p>
-            <p className="text-sm opacity-75">Mira los grupos de los que eres miembro</p>
-          </Link>
         </div>
 
         <div className="mt-12">
-          <Link to="/tareas" className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-semibold text-xl shadow-lg hover:scale-105 transition">
-            Ver Tareas 🚀
+          <Link to="/grupos" className="bg-yellow-400 hover:bg-yellow-600 text-gray-900 px-8 py-4 rounded-full font-semibold text-xl shadow-lg hover:scale-105 transition">
+          Mis Grupos👨‍👩‍👧‍👦
           </Link>
         </div>
       </main>
